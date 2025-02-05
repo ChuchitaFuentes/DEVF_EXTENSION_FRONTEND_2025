@@ -26,3 +26,6 @@ console.log (10*"Ana")
 
  console.log(typeof(42));
  console.log(typeof("25"));
+ console.log(typeof(null));
+ console.log(typeof(true));
+ console.log(typeof(false));
