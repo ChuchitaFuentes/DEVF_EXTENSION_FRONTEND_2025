@@ -33,3 +33,7 @@ console.log(personas);
 
 // imprime el elemento con el indice 2 en el arreglo
 console.log(personas[2]);
+
+//modifica un valor reasignación
+personas[1]='José';
+console.log(personas);
