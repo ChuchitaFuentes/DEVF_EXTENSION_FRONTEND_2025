@@ -7,7 +7,7 @@ function areaTriangulo(base, altura) {
 }
 
 function areaRectangulo(base,altura) {
-    return 
+    return base*altura;
 }
 
 function celsiusAFahrenheit(celsius) {
@@ -15,6 +15,17 @@ function celsiusAFahrenheit(celsius) {
 }
 
 function esPar(numero) {
-
-    
+    if (numero % 2 === 0){
+        console.log("El número es PAR");
+    }
+    else{
+        console.log("El número es IMPAR")
+    }
 }
+let numeroprueba=5;
+
+areaCirculo(numeroprueba);
+areaTriangulo(numeroprueba);
+areaRectangulo(numeroprueba);
+celsiusAFahrenheit(numeroprueba);
+esPar(numeroprueba);
