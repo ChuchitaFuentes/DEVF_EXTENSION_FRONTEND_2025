@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pasteleria Delicias</title>
+</head>
+
+<body>
+    <header>
+        <h1>Pastelería Delicias🍰</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="menu-inicio">Inicio</a></li>
+                <li><a href="# " id="menu-productos">Menu</a></li>
+                <li><a href="#" id="menu-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contenido principal -->
+        <section id="inicio">
+            <h2>Bienvenido a nuestra pastelería</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus rem est nobis, minima
+                nam. Ut pariatur distinctio alias blanditiis optio neque odit itaque, magnam libero aliquid reiciendis
+                sapiente? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos quod qui, nobis hic veritatis
+                incidunt non quam earum voluptates inventore soluta modi facere unde porro rerum, ab facilis sapiente
+                reiciendis?
+                Eum soluta illum voluptatibus dolor voluptatum repellendus ex nemo alias tempora illo quaerat voluptate,
+                tempore ipsum nihil, quas veritatis explicabo consectetur ad eos iure perferendis odit. Ratione quia
+                ipsum eaque?
+                Ex, officiis culpa saepe odit, iste tempora aspernatur temporibus excepturi eos dicta aliquam iure
+                obcaecati quibusdam laudantium molestiae explicabo debitis facilis amet quia aut quod voluptates, fuga
+                voluptas! Consequuntur, officiis?</p>
+        </section>
+        <!-- Menu -->
+        <section id="productos" style="display:none">
+            <h2>Prueba nuestros deliciosos productos...</h2>
+            <div id="lista-productos">
+                <!-- Tarjeta de mis productos -->
+                <div class="producto">
+                    <h3>Pastel de chocolate🍫</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur atque hic, pariatur voluptatum
+                        tempore expedita quisquam. </p>
+                    <button class="agregar-carrito" data-nombre="Pastel de chocolate" data-precio="250">Agregar al
+                        carrito 🛒</button>
+                </div>
+                <div class="producto">
+                    <h3>Pastel de fresa🍓</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur atque hic, pariatur voluptatum
+                        tempore expedita quisquam. </p>
+                    <button class="agregar-carrito" data-nombre="Pastel de fresa" data-precio="250">Agregar al carrito
+                        🛒</button>
+                </div>
+                <div class="producto">
+                    <h3>Pastel de vainilla💛</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur atque hic, pariatur voluptatum
+                        tempore expedita quisquam. </p>
+                    <button class="agregar-carrito" data-nombre="Pastel de vainilla" data-precio="250">Agregar al
+                        carrito 🛒</button>
+                </div>
+
+                <div id="carrito">
+                    <h2>Carrito:</h2>
+                    <ul id="lista-carrito"></ul>
+                    <p>Total: $ <span id="total-carrito">0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="contacto" style="display: none;">
+            <h2>Contactanos</h2>
+            <form id="formulario-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea type="text" id="nombre" name="nombre" required> </textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="mensaje-enviado" style="display: none;">
+                <p>Gracias! Mensaje Enviado...</p>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
