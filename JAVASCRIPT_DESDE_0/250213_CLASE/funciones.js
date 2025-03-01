@@ -1,8 +1,9 @@
 //Funciones
 //Palabra reservada funcion + nombre de la funcion+ parámetros
-/*
+
+
 function Sumar(numero1, numero2){ 
-    let total = 1 + 2;
+    let total = numero1 + numero2;
     return total;
 }
 //LLamada a mi funcion
@@ -27,12 +28,11 @@ console.log(Sumar(2,3));
 
 function Restar(a,b){
     let total=a-b;
-    console.log(total); //Con conslole.log solo se imprime en la consola
+    console.log(total); //Con console.log solo se imprime en la consola
 }
-console.log(Restar(13,3));
 //No se guarda el resultado en una variable
-*/
-//ME PERDI REVISAR CODIGO DE ARRIBA
+console.log(Restar(13,3));
+
 
 function Casita(){ //No recibe parámetros
     let nombre1="Maria";
