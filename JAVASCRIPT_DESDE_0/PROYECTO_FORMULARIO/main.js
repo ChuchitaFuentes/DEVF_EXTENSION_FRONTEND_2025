@@ -69,7 +69,7 @@ contenedorEtiquetas.className='contenedor-etiquetas';
 
 tagsSeleccionados.forEach(item => {
     const li = document.createElement("li"); 
-    li.textContent = '🔗'+ item; 
+    li.textContent = ' 📎 '+ item; 
     li.className='etiqueta-tag'
     contenedorEtiquetas.appendChild(li);
   });

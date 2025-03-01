@@ -81,7 +81,7 @@
   }
 
   legend{
-    margin: 1rem;
+    margin: 0rem 1rem ;
     padding: .3rem;
   }
 
@@ -102,7 +102,8 @@
   border-color: var(--color-bordes);
 }
   .opciones {
-    margin: .2rem;
+    
+    padding: .5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -120,30 +121,45 @@
   }
 /* Tarjeta de comentarios */
   .tarjeta-comentario{
+    display: flex;
+    flex-direction: column;
     margin: .5rem;
     padding: 1rem;
     border: 0.05rem solid var(--color-bordes);
     border-radius: 1rem;
+    position: relative;
   }
   .parrafo-informacion{
     text-align: justify;
     display: inline-block;
+    
+    padding:1rem;
   }
   .parrafo-fecha{
     text-align: right;
+    color: var(--color-texto-requisitos);
   }
   .boton-eliminar{
     font-size: 1rem;
-    position: relative;
-    right: 0;
-    bottom: 0;
+    background-color: var(--color-primario);
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
   }
 .icono{
   display: inline-block;
+  border: .1rem solid var(--color-bordes);
+  border-radius: 2rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
   
 }
 .contenedor-etiquetas{
   display: flex;
+  flex-wrap: wrap;
+  
 }
 .etiqueta-tag{
   list-style: none;
