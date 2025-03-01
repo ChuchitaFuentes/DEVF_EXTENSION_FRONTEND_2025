@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Foro de comentarios</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo">🗨️ Foro de comentarios</h1>
+    </header>
+    <main>
+        <section id="seccionTema">
+            <h2 id="subtitulo">Tema:</h2>
+            <h3 id="subtituloDinamico">Diseño de páginas web</h3>
+        </section>
+        <section id="seccionFormulario">
+            <form id="formComentario" class="formu">
+
+                <label for="nombre">Me llamo:</label>
+                <input type="text" id="nombre" name="nombre"
+                    placeholder="Coloca el nombre con el cual quieres que aparezca tu comentario..." class="nombre" required> 
+
+
+                <fieldset>
+                    <legend>Soy:</legend>
+
+                    <input type="radio" id="trabajador" name="ocupacion" value="trabajador" checked>
+                    <label for="trabajador">Trabajador</label>
+                    <br>
+
+                    <input type="radio" id="estudiante" name="ocupacion" value="estudiante">
+                    <label for="estudiante">Estudiante</label>
+                    <br>
+
+                    <input type="radio" id="interesado" name="ocupacion" value="interesado">
+                    <label for="interesado">Amante del tema</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Quiero compartir:</legend>
+
+                    <input type="radio" id="pregunta" name="tipoComentario" value="pregunta"checked>
+                    <label for="pregunta">Una pregunta</label>
+                    <br>
+
+                    <input type="radio" id="opinion" name="tipoComentario" value="opinion">
+                    <label for="opinion">Una opinion</label>
+                    <br>
+                    <textarea name="comentario" id="comentario" placeholder="Comparte tu comentario..." required
+                        class="comentario"></textarea>                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tags relacionados:</legend>
+
+                    <input type="checkbox" id="html" name="tag1" value="HTML">
+                    <label for="html">HTML</label>
+                    <br>
+
+                    <input type="checkbox" id="css" name="tag2" value="CSS">
+                    <label for="css">CSS</label>
+                    <br>
+
+                    <input type="checkbox" id="javascript" name="tag3" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+
+                </fieldset>
+                <button class="boton_formulario" type="submit">Publicar </button>
+                <button class="boton_formulario" type="reset">Limpiar</button>
+            </form>
+        </section>
+        <section id="seccionComentarios">
+            <h2 >Comentarios...</h2>
+            <div id="comentarios"></div>
+        </section>
+    </main>
+    <footer>
+        <p class="derechos">&copy; 2024 María Fuentes. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/main.js"></script>
+</body>
+
+</html>
