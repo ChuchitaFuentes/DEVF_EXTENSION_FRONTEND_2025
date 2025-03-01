@@ -19,63 +19,93 @@
         </section>
         <section id="seccionFormulario">
             <form id="formComentario" class="formu">
+                <div class="opciones">
+                    <label for="nombre" >Me llamo:</label>
+                    <input type="text" id="nombre" name="nombre"
+                        placeholder="Coloca el nombre con el cual quieres que aparezca tu comentario..." class="nombre"
+                        required>
+                </div>
 
-                <label for="nombre">Me llamo:</label>
-                <input type="text" id="nombre" name="nombre"
-                    placeholder="Coloca el nombre con el cual quieres que aparezca tu comentario..." class="nombre" required> 
-
-
-                <fieldset>
+                <fieldset class="opciones">
                     <legend>Soy:</legend>
+                    <div class="option">
+                        <input type="radio" id="trabajador" name="ocupacion" value="trabajador" checked>
+                        <label for="trabajador">Trabajador</label>
+                    </div>
 
-                    <input type="radio" id="trabajador" name="ocupacion" value="trabajador" checked>
-                    <label for="trabajador">Trabajador</label>
-                    <br>
+                    <div class="option">
+                        <input type="radio" id="estudiante" name="ocupacion" value="estudiante">
+                        <label for="estudiante">Estudiante</label>
+                    </div>
 
-                    <input type="radio" id="estudiante" name="ocupacion" value="estudiante">
-                    <label for="estudiante">Estudiante</label>
-                    <br>
-
-                    <input type="radio" id="interesado" name="ocupacion" value="interesado">
-                    <label for="interesado">Amante del tema</label>
+                    <div class="option">
+                        <input type="radio" id="interesado" name="ocupacion" value="interesado">
+                        <label for="interesado">Amante del tema</label>
+                    </div>
                 </fieldset>
 
                 <fieldset>
+
                     <legend>Quiero compartir:</legend>
 
-                    <input type="radio" id="pregunta" name="tipoComentario" value="pregunta"checked>
-                    <label for="pregunta">Una pregunta</label>
-                    <br>
+                    <div class="opciones">
+                        <div class="option">
+                            <input type="radio" id="pregunta" name="tipoComentario" value="pregunta" checked>
+                            <label for="pregunta">Una pregunta</label>
+                        </div>
 
-                    <input type="radio" id="opinion" name="tipoComentario" value="opinion">
-                    <label for="opinion">Una opinion</label>
-                    <br>
+                        <div class="option">
+                            <input type="radio" id="opinion" name="tipoComentario" value="opinion">
+                            <label for="opinion">Una opinion</label>
+                        </div>
+                    </div>
+
                     <textarea name="comentario" id="comentario" placeholder="Comparte tu comentario..." required
-                        class="comentario"></textarea>                    
-                </fieldset>
+                        class="comentario"></textarea>
 
-                <fieldset>
+                </fieldset>
+                <fieldset class="opciones">
                     <legend>Tags relacionados:</legend>
 
-                    <input type="checkbox" id="html" name="tag1" value="HTML">
-                    <label for="html">HTML</label>
-                    <br>
+                    <div>
+                        <input type="checkbox" id="html" name="tag1" value="HTML">
+                        <label for="html">HTML</label>
+                    </div>
 
-                    <input type="checkbox" id="css" name="tag2" value="CSS">
-                    <label for="css">CSS</label>
-                    <br>
+                    <div>
+                        <input type="checkbox" id="css" name="tag2" value="CSS">
+                        <label for="css">CSS</label>
+                    </div>
 
-                    <input type="checkbox" id="javascript" name="tag3" value="JavaScript">
-                    <label for="javascript">JavaScript</label>
-
+                    <div>
+                        <input type="checkbox" id="javascript" name="tag3" value="JavaScript">
+                        <label for="javascript">JavaScript</label>
+                    </div>
                 </fieldset>
+                <div class="opciones">
                 <button class="boton_formulario" type="submit">Publicar </button>
                 <button class="boton_formulario" type="reset">Limpiar</button>
+            </div>
             </form>
         </section>
         <section id="seccionComentarios">
-            <h2 >Comentarios...</h2>
-            <div id="comentarios"></div>
+            <h2>Comentarios...</h2>
+            <div id="comentarios">
+                <div class="tarjeta-comentario">
+                    
+                    <h2 class="icono">❔</h2>
+                    <p class="parrafo-informacion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum voluptatem delectus ut possimus in doloribus ex, eveniet amet, accusamus laborum illum? Quae obcaecati cum fuga veniam. Cumque, debitis ad.
+                    Reprehenderit est iusto harum non veritatis? A, velit impedit ratione soluta eligendi fugit doloribus ipsam odit, cupiditate suscipit porro modi illo sequi perferendis. Obcaecati nulla aliquam tempora deserunt nostrum soluta.
+                    Minima, ad, ipsum sit natus neque libero deleniti labore veritatis hic quod minus quasi iste asperiores animi exercitationem est culpa voluptatibus! Cum quasi explicabo obcaecati sint libero corporis fuga? </p>
+                    <p class="parrafo-fecha">28/2/25</p>
+                    <ul class="contenedor-etiquetas">
+                        <li class="etiqueta-tag">HTML</li>
+                        <li class="etiqueta-tag">CSS</li>
+                        <li class="etiqueta-tag">JavaScript</li>
+                    </ul>
+                    <button class="boton-eliminar">✖️</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

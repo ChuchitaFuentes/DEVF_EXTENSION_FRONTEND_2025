@@ -4,20 +4,21 @@ class Publicacion{
         this._ocupacion = ocupacion;
         this._tipoComentario = tipoComentario;
         this._comentario = comentario;
-        this._icono = "";
+        
     }
     mostrarInfo(){
         let descripcion=`Me llamo ${this._nombre}, soy ${this._ocupacion}, tengo una ${this._tipoComentario}: ${this._comentario}`;
         return descripcion; 
     }
     seleccionIcono(){
+        let icono="";
         if (this._tipoComentario == 'pregunta'){
-            this.icono="❔";
+            icono="❔";
         }
         else{
-            this.icono="🗨️"
+            icono="🗨️"
         }
-        return `${this.icono}`;    
+        return `${icono}`;    
     }
     publicacionFecha(){
         let obtenerDatos = new Date();
@@ -39,22 +40,17 @@ formulario.addEventListener("submit", function(event){
 
 const nombre = document.getElementById("nombre").value;
 
-const ocupacionSeleccionada = document.querySelector('input[name="ocupacion"]:checked');
-const ocupacion = ocupacionSeleccionada ? ocupacionSeleccionada.value : "No especificado";
+const ocupacion = document.querySelector('input[name="ocupacion"]:checked').value;
 
-
-const tipoComentarioSeleccionado = document.querySelector('input[name="tipoComentario"]:checked');
-const tipoComentario = tipoComentarioSeleccionado ? tipoComentarioSeleccionado.value : "No especificado";
+const tipoComentario = document.querySelector('input[name="tipoComentario"]:checked').value;
 
 const comentario = document.getElementById("comentario").value;
 
 const tagsSeleccionados = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(tag => tag.value);
-if (tagsSeleccionados.length === 0) {
-    tagsSeleccionados.push("Sin etiquetas");
-}
 
 const nuevoComentario = new Publicacion(nombre, ocupacion, tipoComentario, comentario);
 const div=document.createElement('div');
+div.className='tarjeta-comentario';
 
 const titulo=document.createElement('h2');
 titulo.className='icono';
@@ -73,7 +69,7 @@ contenedorEtiquetas.className='contenedor-etiquetas';
 
 tagsSeleccionados.forEach(item => {
     const li = document.createElement("li"); 
-    li.textContent = item; 
+    li.textContent = '🔗'+ item; 
     li.className='etiqueta-tag'
     contenedorEtiquetas.appendChild(li);
   });
