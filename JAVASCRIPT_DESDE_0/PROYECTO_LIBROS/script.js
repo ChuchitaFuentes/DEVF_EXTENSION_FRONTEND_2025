@@ -25,16 +25,22 @@ class Libro{
     //Funcion para agregar capitulos
     agregarCapitulo(nuevoCapitulo){
         this._capitulos.push(nuevoCapitulo);
-        return `Capítulo "${nuevoCapitulo}" agregado al libro "${this._name}".` 
+        return `Se ha agregado el capítulo "${nuevoCapitulo}" al libro "${this._name}".` 
+    }
+    //Funcion que elimina capitulos
+    eliminarCapitulos(){
+        let mensaje=`Se ha eliminado el capítulo "${this._capitulos[(this._capitulos).length-1]}" del libro "${this._name}"`;
+        this._capitulos.pop();
+        return mensaje;
     }
 
-    //Funcion para listar capitulos(No se muy bien como funciona, no se porque el retur me marcaba undefined)
+    //Funcion para listar capitulos(No se muy bien como funciona)
     listadoCapitulos(){
-        console.log(`Capitulos de ${this._name}:`)
+        console.log(`Capítulos de "${this._name}":`);
         this._capitulos.forEach((element, indice)=> {
             console.log(`${indice+1}. ${element}`);
         });
-        return `-----------------`;
+        return console.log(`----------------------`) ;
     }
    
 }
@@ -42,7 +48,7 @@ class Libro{
 //console.log(libro1.numeroID); Se puede obtener el numero de inventario de un libro
 
 //Declaracion de objetos
-let libro1= new Libro('El libro interminablo', 'Michael Ende', 2013, 'Disponible');
+let libro1= new Libro('El libro interminable', 'Michael Ende', 2013, 'Disponible');
 let libro2= new Libro('El hombre que vendio su Ferrari', 'Robert S. Sharman', 2008, 'No disponible');
 
 
@@ -50,12 +56,15 @@ let libro2= new Libro('El hombre que vendio su Ferrari', 'Robert S. Sharman', 20
 console.log(libro1.descripcionLibro());
 console.log(libro1.agregarCapitulo('Fantasia en peligro'));
 console.log(libro1.agregarCapitulo('El llamamiendo de Atreyu'));
-console.log(libro1.listadoCapitulos());
+console.log(libro1.eliminarCapitulos());
+libro1.listadoCapitulos();
+
 
 //Llamando a funciones del libro 2
+
 console.log(libro2.descripcionLibro());
 console.log(libro2.agregarCapitulo('El despertar'));
 console.log(libro2.agregarCapitulo('El visitante misterioso'));
-console.log(libro2.listadoCapitulos());
+libro2.listadoCapitulos();
 
 console.log(`TOTAL DE LIBROS : ${Libro.totalLibros}`); //Se obtiene el numero total de objetos creados
