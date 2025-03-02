@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generador de contraseñas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Generador de contraseñas</h1>
+    </header>
+    <main>
+        <section id="contenedorPassword">
+            <label for="password">Contraseña generada</label>
+            <input type="text" id="passwordGenerada" class="password">
+            <button id="copiarPassword">📄</button>
+        </section>
+        <section id="contenedorControladores">
+            <label for="seleccionaLargo">Número caracteres</label>
+            <input type="range" id="seleccionarLargo" min="0" max="16" value="8">
+            <p id="valorSeleccionado">8</p>
+            <div id="contenedorOpciones" class="contenedorOpciones">
+                <div>
+                    <input type="checkbox" class="checkbox" id="letrasMayusculas" name="letrasMayusculas"checked>
+                    <label for="letrasMayusculas">Incluir Letras Mayúsculas</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="letrasMinusculas" name="letrasMinusculas">
+                <label for="letrasMinusculas">Incluir Letras Minúsculas</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="numeros" name="numeros">
+                <label for="numeros">Incluir Números</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="simbolos" name="simbolos">
+                <label for="simbolos">Incluir Símbolos</label>
+                </div>
+                
+            </div>
+        </section>
+        <section id="contenedorSeguridad">
+            <meter value="" id="SeguridadPassword"></meter>
+        </section>
+        <section id="contenedorBoton">
+            <button id="botonGenerador" class="boton-generador">Generar</button>
+        </section>
+    </main>
+    <footer>
+        <p class="derechos">&copy; 2025 María Fuentes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
