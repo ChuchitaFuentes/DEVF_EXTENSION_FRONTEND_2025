@@ -78,7 +78,14 @@ const boton=document.createElement('button');
 boton.className='boton-eliminar';
 boton.textContent='✖️';
 boton.onclick =function(){
-    div.remove();
+    const respuesta=confirm("¿Seguro que quieres eliminar este comentario?")
+    if (respuesta){
+        div.remove();
+        alert("Comentario eliminado")
+    }
+    else{
+        alert("Comentario no eliminado")
+    }   
 }
 
 div.appendChild(titulo);
