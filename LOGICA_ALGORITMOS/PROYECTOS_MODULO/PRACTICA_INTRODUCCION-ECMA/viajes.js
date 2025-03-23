@@ -1,7 +1,15 @@
 // viajes.js
 // Array para guardar los destinos
 const destinos = [];
-
+const costosPorDestino = {
+    "Paris": 500,
+    "Londres": 400,
+    "New York": 600
+};
+const costosPorTransporte = {
+    "Avión": 200,
+    "Tren": 100
+};
 class Viaje {
     constructor(destino, fecha, transporte) {
         this.destino = destino,
@@ -14,20 +22,18 @@ class Viaje {
     // Función para calcular el costo del viaje
     calcularCosto(destino, transporte) {
         let costoBase = 0;
-        // Costo base por destino
-        if (destino === "Paris") {
-            costoBase = 500;
-        } else if (destino === "Londres") {
-            costoBase = 400;
-        } else if (destino === "New York") {
-            costoBase = 600;
+
+        if (costosPorDestino[destino] !== undefined) {
+            costoBase += costosPorDestino[destino];
+        } else {
+            console.log(`Destino "${destino}" no encontrado.`);
         }
 
-        // Costo adicional por tipo de transporte
-        if (transporte === "Avión") {
-            costoBase += 200;
-        } else if (transporte === "Tren") {
-            costoBase += 100;
+        if (costosPorTransporte[transporte] !== undefined) {
+            const costoTransporte = costosPorTransporte[transporte];
+            costoBase += costoTransporte;
+        } else {
+            console.log(`Transporte "${transporte}" no encontrado.`);
         }
 
         return costoBase;
