@@ -14,32 +14,32 @@
         <h1>🍎🍞🥬 Mi Lista de Compras 🍎🍞🥬</h1>
     </header>
     <main>
-        <form>
+        <form id="formulario-producto">
             <section>
-                <label for="nombreProducto">Producto</label>
-                <input type="text" id="nombreProducto">
+                <label for="nombre-producto">Producto</label>
+                <input type="text" id="nombre-producto">
 
-                <label for="cantidadProducto">Cantidad:</label>
-                <input type="number" id="cantidadProducto" value="0" min="1" max="30">
+                <label for="cantidad-producto">Cantidad:</label>
+                <input type="number" id="cantidad-producto" value="1" min="1" max="30">
 
-                <label for="unidadProducto">Unidades:</label>
-                <select id="unidadProducto">
+                <label for="unidad-producto">Unidades:</label>
+                <select id="unidad-producto">
                     <option value="Piezas">Piezas</option>
                     <option value="Paquetes">Paquetes</option>
                     <option value="Kilogramos">Kilogramos</option>
                     <option value="Litros">Litros</option>
                 </select>
 
-                <label for="categoriaProducto">Categoría:</label>
-                <select id="categoriaProducto">
+                <label for="categoria-producto">Categoría:</label>
+                <select id="categoria-producto">
                     <option value="Lácteos">Lácteos</option>
                     <option value="Frutas/Verduras">Frutas/Verduras</option>
                     <option value="Harinas">Harinas</option>
                     <option value="Limpieza">Limpieza</option>
                 </select>
 
-                <label for="tiendaProducto">Voy a comprar en:</label>
-                <select id="tiendaProducto">
+                <label for="tienda-producto">Voy a comprar en:</label>
+                <select id="tienda-producto">
                     <option value="Soriana">Soriana</option>
                     <option value="Walmart">Walmart</option>
                     <option value="Fresko">Fresko</option>
@@ -49,10 +49,10 @@
                 <button type="submit">Agregar producto</button>
         </form>
         </section>
-        
+
         <section>
-            <h2>Lista de productos</h2>
-            <ul id="listaProductos"></ul>
+            <h2>Lista de compras</h2>
+            <ul id="lista-compras"></ul>
         </section>
 
     </main>

@@ -4,9 +4,9 @@
 // -Funcion de eliminar.
 // -Funcion de mostrar lista.
 let listaProductos = new Map();
-class Producto{
-    constructor (nombre, cantidad, categoria, unidad, tiendaAdquisicion){
-        this._nombre =  nombre;
+class Producto {
+    constructor(nombre, cantidad, categoria, unidad, tiendaAdquisicion) {
+        this._nombre = nombre;
         this._cantidad = cantidad;
         this._unidad = unidad;
         this._categoria = categoria;
@@ -14,30 +14,29 @@ class Producto{
         this._fechaAgrego = this.fechahoy();
     }
 
-    mostrarInfo(){
+    mostrarInfo() {
         return `Producto: ${this._nombre} | Cantidad: ${this._cantidad}  | Unidad: ${this._unidad} | Categoría: ${this._categoria} | Voy a comprar en: ${this._tiendaAdquisicion} | Fecha en que se agregó: ${this._fechaAgrego}`
     }
-    
-    agregarProducto(){
+
+    agregarProducto() {
         if (!listaProductos.has(this._nombre)) {
-        // Si no existe, lo agregamos a la lista de compras
-        listaProductos.set(this._nombre, this);
-        console.log(`${this._nombre} agregado a la lista.`);
-      } else {
-        console.log(`${this._nombre} ya está en la lista.`);
-      }
+            listaProductos.set(this._nombre, this);
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    fechahoy(){
-        let obtenerDatos =new Date();
+
+    fechahoy() {
+        let obtenerDatos = new Date();
         let fecha = obtenerDatos.toLocaleDateString();
         let hora = obtenerDatos.toLocaleTimeString();
         return `${fecha} ${hora}`;
     }
-
 }
 
-function imprimirProductos(){
+function imprimirProductos() {
     console.log("Lista de productos:");
     console.log([...listaProductos.values()].map(producto => producto.mostrarInfo()));
 }
@@ -49,18 +48,41 @@ function eliminarProducto(nombreProducto) {
         console.log(`No se encontró el producto "${nombreProducto}".`);
     }
 }
-let producto1 = new Producto("Leche", 2, "Lácteos", "Piezas", "Supermercado A");
-let producto2 = new Producto("Manzana", 1, "Frutas", "kg", "Supermercado B");
-let producto3 = new Producto("Pan", 1, "Pan/Pastas", "Paquete", "Supermercado C");
+
+//Capturar el DOM del formulario
+
+const formulario = document.getElementById("formulario-producto");
+const listaCompras = document.getElementById("lista-compras");
+
+formulario.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const nombre = document.getElementById("nombre-producto").value;
+    const cantidad = document.getElementById("cantidad-producto").value;
+    const categoria = document.getElementById("categoria-producto").value;
+    const unidad = document.getElementById("unidad-producto").value;
+    const tiendaAdquisicion = document.getElementById("tienda-producto").value;
 
 
-producto1.agregarProducto();  
-producto2.agregarProducto();  
-producto3.agregarProducto();
+    let productoLista;
+    productoLista = new Producto(nombre, cantidad, categoria, unidad, tiendaAdquisicion);
 
+    if (productoLista.agregarProducto()) {
+        // Crear el <li> con el texto y botón eliminar
+        const item = document.createElement("li");
+        item.textContent = productoLista.mostrarInfo();
 
-imprimirProductos();
+        // Crear el botón eliminar
+        const botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "Eliminar";
+        botonEliminar.addEventListener("click", function () {
+            eliminarProducto(nombre);
+            listaCompras.removeChild(item);
+        });
+        item.appendChild(botonEliminar);
+        listaCompras.appendChild(item);
+    } else {
+        alert(`El producto "${nombre}" ya está en la lista de compras.`);
+    }
 
-eliminarProducto("Manzana");
-
-imprimirProductos();
+    formulario.reset();
+})
