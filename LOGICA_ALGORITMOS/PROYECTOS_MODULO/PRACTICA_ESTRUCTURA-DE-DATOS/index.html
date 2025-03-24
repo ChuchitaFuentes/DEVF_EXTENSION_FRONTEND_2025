@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>🍎🍞🥬 Mi Lista de Compras 🍎🍞🥬</h1>
+    </header>
+    <main>
+        <form>
+            <section>
+                <label for="nombreProducto">Producto</label>
+                <input type="text" id="nombreProducto">
+
+                <label for="cantidadProducto">Cantidad:</label>
+                <input type="number" id="cantidadProducto" value="0" min="1" max="30">
+
+                <label for="unidadProducto">Unidades:</label>
+                <select id="unidadProducto">
+                    <option value="Piezas">Piezas</option>
+                    <option value="Paquetes">Paquetes</option>
+                    <option value="Kilogramos">Kilogramos</option>
+                    <option value="Litros">Litros</option>
+                </select>
+
+                <label for="categoriaProducto">Categoría:</label>
+                <select id="categoriaProducto">
+                    <option value="Lácteos">Lácteos</option>
+                    <option value="Frutas/Verduras">Frutas/Verduras</option>
+                    <option value="Harinas">Harinas</option>
+                    <option value="Limpieza">Limpieza</option>
+                </select>
+
+                <label for="tiendaProducto">Voy a comprar en:</label>
+                <select id="tiendaProducto">
+                    <option value="Soriana">Soriana</option>
+                    <option value="Walmart">Walmart</option>
+                    <option value="Fresko">Fresko</option>
+                    <option value="HEB">HEB</option>
+                </select>
+
+                <button type="submit">Agregar producto</button>
+        </form>
+        </section>
+        
+        <section>
+            <h2>Lista de productos</h2>
+            <ul id="listaProductos"></ul>
+        </section>
+
+    </main>
+    <footer>
+        <p class="derechos">&copy; 2025 María de Jesús Fuentes Núñez. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
