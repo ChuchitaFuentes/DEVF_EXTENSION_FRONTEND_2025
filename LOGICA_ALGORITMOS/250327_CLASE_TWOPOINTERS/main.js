@@ -25,21 +25,11 @@ let ejemplo = encontrarPar(arr,objetivo);
 console.log(ejemplo);
 
 function improvedTwoSum(arr,target){
-    let left = 0;
-    let right = arr.length - 1;
-    let counter = 0;
-
-    while(left < right){
-        let result =arr[left] + arr [right];
-        if(result === target){
-            return [arr[left], arr[right]];
-        }
-        counter++;
-        if (counter % 2 === 0){
-            right--;
-        }
-        else{
-            left++;
+    for(let i = 0; i < arr.length; i++){
+        for (let j = i+1; j < arr.length; j++){
+            if (arr[i] + arr[j] === target){
+                return[arr[i], arr[j]];
+            }
         }
     }
     return null;
@@ -48,4 +38,4 @@ function improvedTwoSum(arr,target){
 let newArr = [2,15,11,7,8,10,44];
 let target = 9;
 let improvedResult = improvedTwoSum(newArr, target);
-console.log(improvedResult)
+console.log(improvedResult);
