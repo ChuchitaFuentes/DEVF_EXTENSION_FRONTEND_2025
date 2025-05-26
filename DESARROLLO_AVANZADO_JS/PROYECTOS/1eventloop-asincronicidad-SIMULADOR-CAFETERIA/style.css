@@ -1,0 +1,28 @@
+/*Reset básico*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Normalize*/
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #F5F5F5;
+    color:#333;
+    line-height: 1.5;
+}
+/*Estilos generales de las seccionses*/
+header{
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    padding: 1.5rem;
+}
