@@ -9,14 +9,15 @@ function generarID(){
 
 function procesarPedido(id) {
   return new Promise((resolve, reject) => {
-    const tiempoPreparacion = Math.floor(Math.random() * 3000) + 2000;
+  
+    const tiempoPreparacion = Math.floor(Math.random() * 5000) + 3000;
 
     setTimeout(() => {
-      const exito = Math.random() > 0.1; // 90% éxito, 10% falla
+      const exito = Math.random() > 0.2; // 80% éxito, 10% falla
       if (exito) {
         resolve(); // Pedido completado
       } else {
-        reject(`❌ Error al preparar el pedido #${id}`);
+        reject(`❌ Error en cocina al preparar el pedido #${id}`);
       }
     }, tiempoPreparacion);
   });

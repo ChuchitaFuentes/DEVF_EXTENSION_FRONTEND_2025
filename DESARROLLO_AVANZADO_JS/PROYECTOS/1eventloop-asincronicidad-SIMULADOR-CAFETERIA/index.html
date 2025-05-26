@@ -12,13 +12,18 @@
         <h1>☕Café con ciencia🔬</h1>
     </header>
     <main>
-        <select name="producto" id="producto">
+        <div class="contenedor">
+        <select name="producto" id="producto" class="casilla">
             <option value="Café">Café</option>
             <option value="Chocolate">Chocolate</option>
             <option value="Té">Té</option>
         </select>
-        <button id="addOrderBtn">Agregar pedido</button>
-        <ul id="unorderList"></ul>
+        <button id="addOrderBtn" class="boton-ordenar">Agregar pedido</button>
+        </div>
+        <div class="contenedor">
+            <h2>Historial de pedidos</h2>
+            <ul id="unorderList"></ul>
+        </div>
     </main>
     <footer>
         <p>&copy; María de Jesús Fuentes Núñez</p>

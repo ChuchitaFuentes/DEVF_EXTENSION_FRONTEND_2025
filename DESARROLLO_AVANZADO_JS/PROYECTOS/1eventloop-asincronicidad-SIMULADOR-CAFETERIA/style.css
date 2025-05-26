@@ -25,4 +25,23 @@ main{
 }
 footer{
     padding: 1.5rem;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.contenedor{
+    margin: 1rem auto;
+}
+
+.casilla{
+    height: 2rem;
+    width: 8rem;
+}
+
+.boton-ordenar{
+    height: 2rem;
+    width: 8rem;
 }
