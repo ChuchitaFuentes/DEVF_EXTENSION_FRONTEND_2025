@@ -1,0 +1,108 @@
+:root {
+    --color-texto-primario: black;
+    --color-texto-secundario: #333;
+    --color-texto-terciario: white;
+    --color-primario: white;
+    --color-secundario: black;
+    --color-terciario: #f8f8f8;
+    --color-bordes: darkgray;
+    --color-sombras: rgba(125, 150, 144, .5);
+    --color-texto-requisitos: #b9b9b9;
+    --color-fondo-imagenes: #e6e6e6; /*Solo se coloca para futuras referencias*/
+  }
+  
+  /*------------------------------------------------------- RESET BÁSICO----------------------------------------------------------- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  /* ---------------------------------------------------------NORMALIZE --------------------------------------------------------------*/
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    color: var(--color-texto-secundario);
+    background-color: var(--color-primario);
+    margin: 0px;
+    padding: 0px;
+    
+  }
+
+  header {
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .2rem 9%;
+    gap: 1rem;
+    background-color: var(--color-primario);
+    z-index: 1000;
+    box-shadow: 0 0rem 1.5rem var(--color-sombras);
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 9%;
+    margin: auto;
+    
+  }
+  
+  footer {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    box-shadow: 0rem 0rem 1.5rem var(--color-sombras);
+  
+  }
+  
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: var(--color-texto-primario);
+  }
+ 
+  section{
+    padding: .5rem;
+  }
+
+  fieldset{
+    padding: .3rem;
+    margin: .3rem;
+    border-color: var(--color-bordes);
+    border-width: .05rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  form{
+    padding: .3rem;
+    margin: .3rem;
+  }
+
+ .agrupar{
+    display: flex;
+    flex-direction: column;
+    margin: .3rem;
+    padding: .3rem;
+ }
+ .botones{
+text-align: center;
+ }
+ .boton_formulario{
+    height: 2rem;
+    width: 8rem;
+ }
+ 
