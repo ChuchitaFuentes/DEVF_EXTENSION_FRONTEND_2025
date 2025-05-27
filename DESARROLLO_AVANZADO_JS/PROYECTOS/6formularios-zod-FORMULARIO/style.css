@@ -1,0 +1,76 @@
+:root {
+    --color-texto-primario: black;
+    --color-texto-secundario: white;
+    --color-primario: white;
+    --color-secundario: black;
+    --color-bordes: darkgray;
+    --color-acentos: darkcyan;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: var(--color-texto-secundario);
+    background-color: var(--color-primario);
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+main {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border: .05rem solid var(--color-bordes);
+    border-radius: 1rem;
+    background-color: var(--color-secundario);
+    align-items: center;
+}
+
+footer {
+    color: var(--color-secundario);
+    text-align: center;
+}
+
+section {
+    border: .05rem solid var(--color-bordes);
+    padding: .3rem;
+    margin: .3rem;
+    text-align: center;
+    border-radius: 1rem;
+    color: var(--color-texto-secundario);
+    
+}
+h1{
+    color: var(--color-texto-primario);
+}
+
+button{
+    background-color: var(--color-secundario);
+    color: var(--color-texto-secundario);
+    border: .05rem solid var(--color-bordes);
+    height: 2rem;
+    width: 5rem;
+    border-radius: .5rem;
+}
+
+.parrafoE{
+    color: var(--color-bordes);
+}
+
+.registerForm{
+    text-align: center;
+}
