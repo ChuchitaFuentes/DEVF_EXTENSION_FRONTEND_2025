@@ -28,13 +28,13 @@ export const Section = () => {
   return (
     <section>
         {
-            users.map(user=>{
+            users.map(({id, name, description, image})=>{
                 return(
-                    <div className='card'key ={user.id}>
-                        <img className='image' src={user.image} alt={user.name} />
-                        <h2 className='name'>{user.name}</h2>
-                        <p className='description'>{user.description}</p>
-                        <button className='button' onClick={()=>handleClick(user.name)}>Contactar</button>
+                    <div className='card'key ={id}>
+                        <img className='image' src={image} alt={name} />
+                        <h2 className='name'>{name}</h2>
+                        <p className='description'>{description}</p>
+                        <button className='button' onClick={()=>handleClick(name)}>Contactar</button>
                     </div>
                 )
             })
