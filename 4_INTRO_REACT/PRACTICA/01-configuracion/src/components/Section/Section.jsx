@@ -21,6 +21,10 @@ const users =[
     }
 ]
 export const Section = () => {
+    /* Este es un manejador de eventos del boton de cada tarjeta */
+    const handleClick=(name) =>{
+        console.log(`Contactando a ${name}`)
+    }
   return (
     <section>
         {
@@ -30,6 +34,7 @@ export const Section = () => {
                         <img className='image' src={user.image} alt={user.name} />
                         <h2 className='name'>{user.name}</h2>
                         <p className='description'>{user.description}</p>
+                        <button className='button' onClick={()=>handleClick(user.name)}>Contactar</button>
                     </div>
                 )
             })
