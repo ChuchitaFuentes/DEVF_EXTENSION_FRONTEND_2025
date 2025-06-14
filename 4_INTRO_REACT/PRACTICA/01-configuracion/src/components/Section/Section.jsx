@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import userImg from '../../assets/usuario.png'
 import './Section.css'
 const users =[
@@ -21,10 +22,16 @@ const users =[
     }
 ]
 export const Section = () => {
+
+    const [count, setCount] = useState(0)
+
+    console.log(count)
+
     /* Este es un manejador de eventos del boton de cada tarjeta */
     const handleClick=(name) =>{
-        console.log(`Contactando a ${name}`)
+        setCount(count + 1)
     }
+    
   return (
     <section>
         {
