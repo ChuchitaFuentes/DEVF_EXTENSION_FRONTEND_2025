@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import userImg from '../../assets/usuario.png'
+import { UserCard } from '../UserCard/UserCard.jsx'
 import './Section.css'
 const users =[
     {
@@ -27,22 +28,13 @@ export const Section = () => {
 
     console.log(count)
 
-    /* Este es un manejador de eventos del boton de cada tarjeta */
-    const handleClick=(name) =>{
-        setCount(count + 1)
-    }
-    
+
   return (
     <section>
         {
             users.map(({id, name, description, image})=>{
                 return(
-                    <div className='card'key ={id}>
-                        <img className='image' src={image} alt={name} />
-                        <h2 className='name'>{name}</h2>
-                        <p className='description'>{description}</p>
-                        <button className='button' onClick={()=>handleClick(name)}>Contactar</button>
-                    </div>
+                    <UserCard key = {id} user = {{id, name, description, image}}/>
                 )
             })
         }
