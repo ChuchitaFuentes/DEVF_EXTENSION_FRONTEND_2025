@@ -10,7 +10,7 @@ function App() {
     <>
     <Header title="Mi pagina Web" show={true}/> {/* Se agrega el componente, tiene un prop  */}
     <Section />
-    <Footer/>
+    {/* <Footer/> */} {/* se comenta de manera temporal para que no se vea */}
     </>
   )
 }

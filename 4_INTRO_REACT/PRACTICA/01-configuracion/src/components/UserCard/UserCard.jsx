@@ -11,7 +11,7 @@ export const UserCard = ({ user }) => {
         setAddress({...address, street: 'Nueva calle', number :456})
     }
 
-     console.log(address);
+     //console.log(address); se comenta momentaneamente
 
     return (
         <div className='card'>

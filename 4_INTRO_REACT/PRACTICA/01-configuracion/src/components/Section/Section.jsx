@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import userImg from '../../assets/usuario.png'
 import { UserCard } from '../UserCard/UserCard.jsx'
 import './Section.css'
@@ -25,11 +25,24 @@ const users =[
 export const Section = () => {
 
     const [count, setCount] = useState(0)
+    const [likes,setLikes] = useState(0)
+    
+    useEffect(()=> {
+        console.log('useEffect ejecutado')
+    }, [count])
 
-    console.log(count)
-
+    /* Son los dos manejadores de los botones, es una funcion flecha por lo que se dejan ambos ejemplos */
+    const handleClick = () =>{
+        setCount(count+1)
+    }
+    const handleIncreseLikes = () => setLikes (likes + 1);
 
   return (
+    <>
+    <h2>{count}</h2>
+    <button onClick={handleClick}>Contador</button>
+    <h2>{likes}</h2>
+    <button onClick={handleIncreseLikes}>Like</button>
     <section>
         {
             users.map(({id, name, description, image})=>{
@@ -39,6 +52,7 @@ export const Section = () => {
             })
         }
     </section>
+    </>
   )
 }
 
