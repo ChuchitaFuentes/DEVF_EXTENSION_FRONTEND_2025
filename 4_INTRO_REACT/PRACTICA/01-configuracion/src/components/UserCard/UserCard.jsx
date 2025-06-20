@@ -2,17 +2,16 @@ import { useState } from 'react'
 
 export const UserCard = ({ user }) => {
     const [isContacted, setIsContacted] = useState(false);
-    const [tecnologies, setTecnologies] = useState(['HTML', 'CSS', 'JS']);
+    const [address, setAddress] = useState({street: 'Calle Falsa', number:123})
     //Desestruturacion del objeto
     const { id, name, description, image } = user;
 
     /* Este es un manejador de eventos del boton de cada tarjeta */
     const handleClick = (name) => {
-        const newTecnologies = [...tecnologies, 'React'];
-        setTecnologies(newTecnologies);
+        setAddress({...address, street: 'Nueva calle', number :456})
     }
 
-     console.log(tecnologies);
+     console.log(address);
 
     return (
         <div className='card'>
