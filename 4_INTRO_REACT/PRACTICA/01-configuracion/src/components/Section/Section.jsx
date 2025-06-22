@@ -24,17 +24,17 @@ import './Section.css'
 // ]
 export const Section = () => {
 
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
     const [likes,setLikes] = useState(0)
-    const [users, setUsers] = useState([])
+    const [user, setUser] = useState([])
     
     useEffect(()=> {
         console.log('useEffect ejecutado');
-        const resultado = fetch('https://dummyjson.com/users?limit=3')
+        const resultado = fetch(`https://dummyjson.com/users/${count}`)
         .then ((res)=>res.json())
         .then (data=>{
-            console.log(data.users)
-            setUsers(data.users)})
+            console.log(data)
+            setUser(data)})
     }, [count])  
 
     /* Son los dos manejadores de los botones, es una funcion flecha por lo que se dejan ambos ejemplos */
@@ -51,11 +51,8 @@ export const Section = () => {
     <button onClick={handleIncreseLikes}>Like</button>
     <section>
         {
-            users.map(({id, firstName, email, image})=>{
-                return(
-                    <UserCard key = {id} user = {{id, firstName, email, image}}/>
-                )
-            })
+                    <UserCard key = {user.id} user = {user}/>
+            
         }
     </section>
     </>
