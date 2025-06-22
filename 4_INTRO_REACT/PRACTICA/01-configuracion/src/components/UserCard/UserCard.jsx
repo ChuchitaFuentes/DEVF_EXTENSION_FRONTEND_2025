@@ -4,7 +4,7 @@ export const UserCard = ({ user }) => {
     const [isContacted, setIsContacted] = useState(false);
     const [address, setAddress] = useState({street: 'Calle Falsa', number:123})
     //Desestruturacion del objeto
-    const { id, name, description, image } = user;
+    const { id, firstName, email, image } = user;
 
     /* Este es un manejador de eventos del boton de cada tarjeta */
     const handleClick = (name) => {
@@ -15,9 +15,9 @@ export const UserCard = ({ user }) => {
 
     return (
         <div className='card'>
-            <img className='image' src={image} alt={name} />
-            <h2 className='name'>{name}</h2>
-            <p className='description'>{description}</p>
+            <img className='image' src={image} alt={firstName} />
+            <h2 className='firstName'>{firstName}</h2>
+            <p className='email'>{email}</p>
             <button className='button' onClick={() => handleClick()}>
                 {
                     isContacted ? 'Contactado' : 'Contactar'
