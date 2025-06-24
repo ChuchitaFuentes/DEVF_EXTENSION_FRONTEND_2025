@@ -1,0 +1,38 @@
+.app-container {
+  display: flex;
+  flex-direction: column; /* Apilar verticalmente */
+  align-items: center;    /* Centrar horizontalmente */
+  gap: 1.5rem;            /* Separación vertical */
+  padding: 2rem;
+  background-color: #333;
+  border-radius: 12px;
+  
+}
+
+.header {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  
+}
+.tarjeta {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+ h2, h4, p {
+  margin-bottom: 0.8rem;
+  color: #333;
+}
