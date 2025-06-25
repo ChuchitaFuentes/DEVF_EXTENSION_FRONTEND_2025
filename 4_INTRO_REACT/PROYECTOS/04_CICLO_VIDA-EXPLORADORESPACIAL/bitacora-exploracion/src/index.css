@@ -1,0 +1,28 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía general */
+body {
+  font-family:'Times New Roman', Times, serif;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botones */
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+
