@@ -1,0 +1,12 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap:1.5rem;
+}
+
+form input{
+    width: 80%;
+}
