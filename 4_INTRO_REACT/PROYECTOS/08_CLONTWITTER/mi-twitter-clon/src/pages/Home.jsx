@@ -1,0 +1,59 @@
+import { useState, useEffect } from "react";
+import TweetForm from "../components/TweetForm";
+import TweetList from "../components/TweetList";
+
+const Home = ({ user, logout }) => {
+  const [tweets, setTweets] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false); // Evita guardar antes de cargar
+
+  // Cargar tweets desde localStorage al iniciar
+  useEffect(() => {
+    if (!user) return;
+
+    const storedTweets = localStorage.getItem(`tweets_${user.username}`);
+    if (storedTweets) {
+      setTweets(JSON.parse(storedTweets));
+    }
+
+    setIsLoaded(true); // ✅ Marca como ya cargado
+  }, [user]);
+
+  // Guardar tweets solo si ya se cargaron
+  useEffect(() => {
+    if (!user || !isLoaded) return;
+    localStorage.setItem(`tweets_${user.username}`, JSON.stringify(tweets));
+  }, [tweets, user, isLoaded]);
+
+  const handleAddTweet = (text) => {
+    const newTweet = {
+      id: Date.now(),
+      text,
+      likes: 0,
+      username: user.username,
+    };
+    setTweets([newTweet, ...tweets]);
+  };
+
+  const handleLike = (id) => {
+    setTweets(
+      tweets.map((tweet) =>
+        tweet.id === id ? { ...tweet, likes: tweet.likes + 1 } : tweet
+      )
+    );
+  };
+
+  if (!user) return <p>Cargando usuario...</p>;
+
+  return (
+    <div>
+      <h1>Bienvenido a Twitter</h1>
+      <p>Hola, @{user.username}!</p>
+      <button onClick={logout}>Cerrar sesión</button>
+
+      <TweetForm onAddTweet={handleAddTweet} />
+      <TweetList tweets={tweets} onLike={handleLike} />
+    </div>
+  );
+};
+
+export default Home;
