@@ -31,6 +31,7 @@ const Home = ({ user, logout }) => {
       text,
       likes: 0,
       username: user.username,
+      date: new Date().toLocaleString()
     };
     setTweets([newTweet, ...tweets]);
   };
