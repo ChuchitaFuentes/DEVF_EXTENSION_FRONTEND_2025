@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Home = ({ user, logout }) => {
   const [tweets, setTweets] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false); // Evita guardar antes de cargar
+  
 
   // Cargar tweets desde localStorage al iniciar
   useEffect(() => {
@@ -36,6 +37,16 @@ const Home = ({ user, logout }) => {
     setTweets([newTweet, ...tweets]);
   };
 
+const handleDeleteTweet = (id) => {
+  const confirmacion = confirm("¿Estas seguro de querer eliminar este tweet?")
+  if (confirmacion) {
+  alert("El tweet se ha eliminado correctamente");
+  setTweets(tweets.filter(tweet => tweet.id !== id));
+} else {
+  alert("Accion cancelada");
+}
+  
+};
 
   const handleLike = (id) => {
     setTweets(
@@ -58,7 +69,7 @@ const Home = ({ user, logout }) => {
       <button onClick={logout}>Cerrar sesión</button>
 
       <TweetForm onAddTweet={handleAddTweet} />
-      <TweetList tweets={tweets} onLike={handleLike} />
+      <TweetList tweets={tweets} onLike={handleLike} onDelete={handleDeleteTweet}/>
     </div>
   );
 };
