@@ -8,6 +8,7 @@ const TweetForm = ({onAddTweet}) => {
         onAddTweet(text);
         setText("");
     };
+
   return (
     <form onSubmit={handleSubmit}>
         <input 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import TweetForm from "../components/TweetForm";
 import TweetList from "../components/TweetList";
+import { Link } from "react-router-dom";
 
 const Home = ({ user, logout }) => {
   const [tweets, setTweets] = useState([]);
@@ -34,6 +35,7 @@ const Home = ({ user, logout }) => {
     setTweets([newTweet, ...tweets]);
   };
 
+
   const handleLike = (id) => {
     setTweets(
       tweets.map((tweet) =>
@@ -47,7 +49,11 @@ const Home = ({ user, logout }) => {
   return (
     <div>
       <h1>Bienvenido a Twitter</h1>
+      <Link to="/profile">
+          <button>Ver Perfil</button>
+        </Link>
       <p>Hola, @{user.username}!</p>
+
       <button onClick={logout}>Cerrar sesión</button>
 
       <TweetForm onAddTweet={handleAddTweet} />

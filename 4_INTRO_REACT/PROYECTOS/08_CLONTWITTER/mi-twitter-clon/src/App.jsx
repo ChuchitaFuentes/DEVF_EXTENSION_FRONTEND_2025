@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-do
 import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile.jsx";
 import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
 import {useState, useEffect} from "react";
 
 import './App.css'
@@ -30,6 +31,7 @@ function App() {
   return (
    <Router>
     <Routes>
+      <Route path="/register" element={<Register />} />
      <Route path="/login" element={<Login onLogin={login} />} />
 
   <Route
