@@ -1,8 +1,9 @@
 import Tweet from "./Tweet"
+import { Box } from "@mui/material";
 
 const TweetList = ({tweets, onLike, onDelete}) => {
   return (
-    <div>
+    <Box>
         {tweets.map((tweet)=>(
             <Tweet 
             key = {tweet.id} 
@@ -12,7 +13,7 @@ const TweetList = ({tweets, onLike, onDelete}) => {
             onDelete={onDelete}
             />
         ))}
-    </div>
+    </Box>
   );
 };
 
