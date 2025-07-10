@@ -1,0 +1,8 @@
+.input-error{
+    border: .2 rem solid red;
+}
+
+.succes-message{
+    color:green;
+    font-weight: bold
+}
