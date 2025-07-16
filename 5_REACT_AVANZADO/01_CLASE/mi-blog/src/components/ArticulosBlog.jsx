@@ -1,12 +1,16 @@
+
 import { useEffect } from "react";
 import { useState } from "react";
-import '../components/ArticulosBlog.css'
+import './ArticulosBlog.css'
 
 
 export default function ArticulosBlog ()  {
     const [recipes,setRecipes] = useState([]); /* los corchetes se ponen para señalar que es un arreglo */
     const [isLoading, setIsLoading] = useState(true); /*se pone como boolean porque su estado inicial te dice si esta cargando o no, y es true porque sino no comenzaria */
     const [error, setError] = useState (null); /* Porque no hay errores en un inicio */
+   ;
+
+   
 
     useEffect(()=>{
         fetch('https://dummyjson.com/recipes?limit=10') /* Se modifica page=2 para cambiar la pagina */

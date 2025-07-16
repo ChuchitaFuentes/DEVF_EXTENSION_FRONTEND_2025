@@ -1,16 +1,19 @@
 
+import { UserProvider } from '../context/UserContext'
+import ContenidoPrivado from './components/ContenidoPrivado'
+import Header from './components/Header'
+import Loging from './components/Login'
 import './App.css'
-import ArticulosBlog from './components/ArticulosBlog'
 
 function App() {
 
 
   return (
-    <>
-      <h1>APIs con React y useEffect</h1>
-      {/* <SimpleForm /> */}
-      <ArticulosBlog />
-    </>
+    <UserProvider>
+      <Header />
+      <Loging />
+      <ContenidoPrivado />
+    </UserProvider>
   )
 }
 
