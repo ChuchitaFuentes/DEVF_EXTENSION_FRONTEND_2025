@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className='p-6 flex flex-col gap-3'>
-      <p className='bg-emerald-600 text-blue-50'>Tailwind 4.1 </p>
+      <p className='bg-dark-font text-blue-50'>Tailwind 4.1 </p> {/* Se pone en esta linea un color personalizado */}
       <p className='bg-red-500'>Background</p>
       <p className='text-blue-500'>Text</p>
       <p className='decoration-sky-500 underline'>Subrayado</p>
