@@ -7,19 +7,15 @@ function App() {
 
   return (
     <>
-      <div className='p-6 flex flex-col gap-3'>
-      <p className='bg-dark-font text-blue-50'>Tailwind 4.1 </p> {/* Se pone en esta linea un color personalizado */}
-      <p className='bg-red-500'>Background</p>
-      <p className='text-blue-500'>Text</p>
-      <p className='decoration-sky-500 underline'>Subrayado</p>
-      <p className='border-2 border-green-500'>Border</p>
-      <p className='shadow-sm shadow-red-500'>Shadow</p>
-      <p className='inset-shadow-sm inset-shadow-indigo-500'>Inset shadow</p>
-      <label>
-        <input className="accent-green-500" type="checkbox" checked />
-        Accent
-      </label>
-      <textarea className='caret-red-700'></textarea>
+      {/* Ancho alto  */}
+      <div className='bg-amber-600 w-xs'>Medidas - TailWind 4.0</div> {/*Medidas preestablecidas */}
+      <div className='bg-sky-600 w-[390px]'>Medidas - TailWind 4.0</div> {/*Medidas personalizadas */}
+      <div className='bg-gray-600 size-[390px]'>Medidas - TailWind 4.0</div>{/* Medidas iguales para alto y ancho */}
+      <div className='bg-blue-600 h-card'>Medidas - TailWind 4.0</div>{/* Mediddas definidas por varible dentro del css */}
+      {/* Tamaño en fracciones dentro de un flex */}
+      <div className='flex gap-0.5 p-2'>
+        <div className='bg-indigo-400 w-1/3'>Elemento 1</div>
+        <div className='bg-indigo-600 w-2/3'>Elemento 2</div>
       </div>
     </>
   )
