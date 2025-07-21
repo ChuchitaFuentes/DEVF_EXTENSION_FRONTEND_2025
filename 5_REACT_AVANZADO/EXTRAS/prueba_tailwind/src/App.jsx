@@ -9,19 +9,20 @@ function App() {
    
     <>
       <h1 className='text-center font-bold mb-4 text-5xl'>Curso Tailwind 4.1</h1> 
-      <h2 className='text-center font-bold mb-10 text-4xl'>Pseudo clases</h2>
-       <button className='bg-blue-800 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-300 cursor-pointer focus:outline-2 focus:outline-red-400 active:bg-amber-400 mb-4'>Aceptar</button>
-       <div className='mb-4'>
-        <a href="https://www.google.com" className="visited:text-green-500" target="_blank">Google</a>
-        <a href="https://www.github.com" className="visited:text-green-500" target="_blank">Github</a>
-        <a href="https://www.youtube.com" className="visited:text-green-500" target="_blank">Youtube</a>
-       </div>
-       <ul className='mb-4'>
-        <li className="first:bg-amber-300 last:bg-red-500 only:bg-blue-300">HTML</li>
-        <li className="first:bg-amber-300 last:bg-red-500 only:bg-blue-300">CSS</li>
-        <li className="first:bg-amber-300 last:bg-red-500 only:bg-blue-300">Tailwind</li>
-       </ul>
-       <input type="text" placeholder='Nombre:' className='disabled:bg-gray-300 required:border-red-500' />
+      <h2 className='text-center font-bold mb-10 text-4xl'>Pseudo elementos</h2>
+      <label for="" className='after:content-["*"] after:text-red-600 after:font after:ml-1'>Email:</label>
+      <label for="" className='before:content-["*"] before:text-red-600 before:font before:ml-1'>Email:</label>
+
+      <div className='mt-4'>
+        <input type="text" className='border placeholder:text-red-500/50' placeholder='Nombre:' />
+      </div>
+      <input type="file" className='mt-4 file:bg-amber-400 file:border-2 file:rounded-full file:px-1 file:cursor-pointer mb-4'/>
+      <ul role="list"className='list-disc ml-2 marker:text-sky-500 p-4 mb-4'>
+        <li className="">HTML</li>
+        <li className="">CSS</li>
+        <li className="">TailWind</li>
+      </ul>
+      <p className='selection:bg-green-300 selection:text-white first-line:uppercase first-letter:font-bold first-letter:text-7xl first-letter:float-left first-letter:mr-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aspernatur nobis dolore necessitatibus magnam nisi, deleniti eius nam obcaecati nihil eum! Adipisci, pariatur alias accusantium debitis voluptatem eos doloribus voluptas!</p>
     </>
   )
 }
