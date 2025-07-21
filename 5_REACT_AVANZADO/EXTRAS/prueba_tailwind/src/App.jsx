@@ -6,19 +6,18 @@ function App() {
 
 
   return (
-    /* Sm y md son puntos de quiebre para manejo del diseño responsivo */
+   
     <>
-      <h1 className='font-bold text-2xl sm:text-3xl md:text-4xl'>Curso Tailwind</h1> {/* tamaños predeterminados */}
-      <h1 className='font-bold text-2xl min-[650px]:text-3xl min-[800px]:text-4xl'>Curso Tailwind</h1> {/* Tamaños personalizados */}
-      <h1 className='sm:max-md:bg-amber-400'>Texto con fondo</h1> {/* Este es un breakpoint con rango */}
+      <h1 className='text-center font-bold mb-4 text-5xl'>Curso Tailwind 4.0</h1> 
+      <h2 className='text-center font-bold mb-10 text-4xl'>Container Queries</h2>
+      
 
-      <div className='p-4 grid grid-cols-2 gap-2 tablet:grid-cols-3 desktop:grid-cols-4'>
-        <div className="box">1</div>
-        <div className="box">2</div>
-        <div className="box">3</div>
-        <div className="box">4</div>
-        <div className="box">5</div>
-        <div className="box">6</div>
+      <div className='@container border-2 border-red-500 p-4 resize overflow-hidden'> {/* Overflow, te dice que hacer con el contenido y el resize sirve para poder cambiar de tamaño */}
+        <div className='flex flex-col gap-2 @sm:flex-row'> {/* para cambiar el tamaño con respecto a el contenedor @container */}
+          <div className="box">1</div>
+          <div className="box">2</div>
+          <div className="box">3</div>
+        </div>
       </div>
     </>
   )
