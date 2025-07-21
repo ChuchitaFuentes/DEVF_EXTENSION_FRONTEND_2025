@@ -1,11 +1,19 @@
 @import 'tailwindcss';
 
-.box{
-    background-color: rgb(47, 135, 106);
-    border-radius: 1em;
-    text-align: center;
-    height: 3rem;
-    margin: .2rem;
-    color: azure;
+/* Con esto se modifica el punto de quiebre que trae como base Tailwind */
+@theme{
+    --breakpoint-sm:27.75rem;
+    /* --breakpoint-*: initial;Con esta linea se resetean todos los breakpoints de Tailwind */
+    /* Con las lineas siguientes se establecen nuevos breakpoints */
+    --breakpoint-tablet:45rem;
+    --breakpoint-desktop:57.5rem;
+}
 
+.box{
+    background-color: rgb(57, 147, 93);
+    text-align: center;
+    height: 1.875rem;
+    border-radius: .125rem;
+    margin: .25rem;
+    color: aliceblue;
 }
