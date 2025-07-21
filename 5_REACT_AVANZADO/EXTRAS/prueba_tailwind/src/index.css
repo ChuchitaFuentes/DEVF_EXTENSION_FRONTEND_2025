@@ -1,12 +1,5 @@
 @import 'tailwindcss';
-
-
-.box{
-    background-color: rgb(57, 147, 93);
-    text-align: center;
-    height: 1.875rem;
-    border-radius: .125rem;
-    margin: .25rem;
-    color: aliceblue;
-    width: 12.5rem;
+/* El uso de apply no es muy recomendable cuando se usa react o algun otro framework ni cunando se uasa tailwind pero de todas formas existe esta funcionalidad */
+.button{
+    @apply bg-amber-400 text-blue-950 py-2 rounded-xl w-[6.25rem] m-4
 }
