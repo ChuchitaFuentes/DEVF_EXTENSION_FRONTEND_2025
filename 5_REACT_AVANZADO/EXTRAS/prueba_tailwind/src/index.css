@@ -1,9 +1,6 @@
 @import 'tailwindcss';
 
-@theme{
-    --container-sm:24rem;
-    --container-tablet:36rem;
-}
+
 .box{
     background-color: rgb(57, 147, 93);
     text-align: center;
